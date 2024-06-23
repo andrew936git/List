@@ -10,8 +10,8 @@ fun main() {
 //2
     var sum = 0
     for (i in array) sum += i
-    println(sum / array.size)
-    println(array.average())
+    println((sum / array.size))
+    println(array.average().toInt())
     println("========================3==========================")
 //3
     sum = 0
@@ -26,11 +26,14 @@ fun main() {
     println(array.count())
     println("========================5==========================")
 //5
+    var sumLastElement = 0
     for (i in array.indices){
-        if (i == array.size - 2 || i == array.size - 1) print("${array[i]} ")
+        if (i == array.size - 2 || i == array.size - 1) sumLastElement += array[i]
     }
-    println()
-    println(array.takeLast(2))
+    println(sumLastElement)
+    sumLastElement = 0
+    sumLastElement = array.elementAt(array.size-1) + array.elementAt(array.size-2)
+    println(sumLastElement)
     println("========================6==========================")
 //6
     sum = 0
